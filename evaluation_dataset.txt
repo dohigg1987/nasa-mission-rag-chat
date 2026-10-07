@@ -1,0 +1,46 @@
+# NASA Mission Intelligence - evaluation dataset
+# Author: Dennis O'Higgins
+#
+# Sample questions used to test the RAG chat system, with the response we expect it to give.
+# Used by batch_evaluation.py:  python batch_evaluation.py --dataset evaluation_dataset.txt
+#
+# Format: one block per question, blocks separated by a blank line.
+#   Q:        the question asked in the chat
+#   Category: overview | emergency | disaster analysis | crew | technical | timeline
+#   Mission:  apollo_11 | apollo_13 | challenger | all   (used as the retrieval filter)
+#   Expected: the answer we expect, used as the reference for BLEU and ROUGE
+
+Q: What was the main objective of the Apollo 11 mission?
+Category: overview
+Mission: apollo_11
+Expected: The main objective of Apollo 11 was to perform a crewed lunar landing and return the crew safely to Earth. Neil Armstrong and Buzz Aldrin landed the lunar module Eagle in the Sea of Tranquility while Michael Collins remained in lunar orbit in the command module Columbia.
+
+Q: What problem did Apollo 13 encounter, and what were its consequences?
+Category: emergency
+Mission: apollo_13
+Expected: About 56 hours into the flight, oxygen tank number 2 in the service module failed, causing a loss of oxygen and electrical power in the command and service module. The crew reported "Houston, we've had a problem", the lunar landing was cancelled, and the crew used the lunar module Aquarius as a lifeboat to return to Earth.
+
+Q: What happened to the Challenger shortly after launch?
+Category: disaster analysis
+Mission: challenger
+Expected: About 73 seconds after liftoff, shortly after the "go at throttle up" call, Challenger broke apart and communications with the vehicle were lost. Flight controllers reported an obvious major malfunction. The later investigation attributed the accident to the failure of the O-ring seals in a joint of the right solid rocket booster.
+
+Q: Who were the crew members of Apollo 13?
+Category: crew
+Mission: apollo_13
+Expected: The Apollo 13 crew were commander James (Jim) Lovell, command module pilot John (Jack) Swigert, and lunar module pilot Fred Haise.
+
+Q: How did the Apollo 13 crew deal with the build-up of carbon dioxide in the lunar module?
+Category: technical
+Mission: apollo_13
+Expected: The lunar module's lithium hydroxide canisters could not remove enough carbon dioxide for three astronauts, and the command module's square canisters did not fit the lunar module. Following instructions from Mission Control, the crew built an adapter from hoses, plastic bags, cardboard and tape so the command module canisters could be used in the lunar module.
+
+Q: When did the Apollo 11 lunar module land on the Moon, and what was reported at touchdown?
+Category: timeline
+Mission: apollo_11
+Expected: The lunar module Eagle landed on 20 July 1969, at about 102 hours 45 minutes ground elapsed time, and Neil Armstrong reported "Houston, Tranquility Base here. The Eagle has landed."
+
+Q: What were the program alarms during the Apollo 11 lunar descent and how did Mission Control respond?
+Category: technical
+Mission: apollo_11
+Expected: During powered descent the lunar module guidance computer raised 1202 and 1201 program alarms, which indicated that the computer was overloaded with tasks. Mission Control judged that the alarms did not threaten the landing and gave the crew a "go" to continue.
