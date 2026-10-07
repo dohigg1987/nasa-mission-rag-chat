@@ -99,7 +99,7 @@ class RetrievalCollection:
             raise RuntimeError("No OpenAI API key available to embed the question.")
         query_embedding = self.embedding_function([query_text])[0]
         return self.collection.query(
-            query_embeddings=[list(query_embedding)],
+            query_embeddings=[[float(value) for value in query_embedding]],  # plain floats for ChromaDB
             n_results=n_results,
             where=where,
             include=["documents", "metadatas", "distances"],
