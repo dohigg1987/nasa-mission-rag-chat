@@ -59,3 +59,20 @@ python batch_evaluation.py --dataset evaluation_dataset.txt --k 5
 ```
 
 Prints the answer and scores for each question and the mean, minimum and maximum of every metric, and saves `evaluation_results.json` and `evaluation_results.csv`.
+
+## 4. End-to-end test results
+
+The complete workflow was run on Google Colab (`run_end_to_end.ipynb`, executed copy included). Full details, discussion and the challenges met are in `REPORT.md`.
+
+* **Database:** 12 files, 16,512 chunks (Apollo 11: 8,878, Apollo 13: 6,513, Challenger: 1,121). A second run in skip mode added 0 and skipped 16,512.
+* **Batch evaluation** (7 questions, k = 5, gpt-3.5-turbo), mean scores:
+
+| Metric | Mean | Min | Max |
+|---|---|---|---|
+| Response relevancy | 0.860 | 0.600 | 1.000 |
+| Context precision | 0.840 | 0.367 | 1.000 |
+| Faithfulness | 0.479 | 0.000 | 1.000 |
+| ROUGE | 0.373 | 0.212 | 0.542 |
+| BLEU | 0.131 | 0.050 | 0.314 |
+
+Per-question answers and scores are in `evaluation_results.csv` and `evaluation_results.json`.

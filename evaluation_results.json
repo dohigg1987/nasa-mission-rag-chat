@@ -1,0 +1,134 @@
+{
+  "summary": {
+    "bleu_score": {
+      "n": 7,
+      "mean": 0.1306,
+      "min": 0.0495,
+      "max": 0.3143
+    },
+    "context_precision": {
+      "n": 7,
+      "mean": 0.8399,
+      "min": 0.3667,
+      "max": 1.0
+    },
+    "faithfulness": {
+      "n": 7,
+      "mean": 0.4786,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "response_relevancy": {
+      "n": 7,
+      "mean": 0.8598,
+      "min": 0.6002,
+      "max": 1.0
+    },
+    "rouge_score": {
+      "n": 7,
+      "mean": 0.3734,
+      "min": 0.2124,
+      "max": 0.5424
+    }
+  },
+  "results": [
+    {
+      "question": "What was the main objective of the Apollo 11 mission?",
+      "category": "overview",
+      "mission": "apollo_11",
+      "expected": "The main objective of Apollo 11 was to perform a crewed lunar landing and return the crew safely to Earth. Neil Armstrong and Buzz Aldrin landed the lunar module Eagle in the Sea of Tranquility while Michael Collins remained in lunar orbit in the command module Columbia.",
+      "answer": "The main objective of the Apollo 11 mission was to perform a manned lunar landing and return safely to Earth [Source 2].",
+      "retrieved_chunks": 5,
+      "response_relevancy": 1.0,
+      "faithfulness": 0.5,
+      "context_precision": 1.0,
+      "bleu_score": 0.3143,
+      "rouge_score": 0.4928,
+      "error": ""
+    },
+    {
+      "question": "What problem did Apollo 13 encounter, and what were its consequences?",
+      "category": "emergency",
+      "mission": "apollo_13",
+      "expected": "About 56 hours into the flight, oxygen tank number 2 in the service module failed, causing a loss of oxygen and electrical power in the command and service module. The crew reported \"Houston, we've had a problem\", the lunar landing was cancelled, and the crew used the lunar module Aquarius as a lifeboat to return to Earth.",
+      "answer": "Apollo 13 encountered an oxygen tank explosion that caused a loss of service module capability. This led to the mission being aborted, the lunar landing being canceled, and the crew having to use the lunar module as a lifeboat to return safely to Earth [Source 1]. The explosion occurred at approximately 55 hours, 55 minutes into the mission [Source 1].",
+      "retrieved_chunks": 5,
+      "response_relevancy": 0.6002,
+      "faithfulness": 0.0,
+      "context_precision": 0.3667,
+      "bleu_score": 0.0495,
+      "rouge_score": 0.4576,
+      "error": ""
+    },
+    {
+      "question": "What happened to the Challenger shortly after launch?",
+      "category": "disaster analysis",
+      "mission": "challenger",
+      "expected": "About 73 seconds after liftoff, shortly after the \"go at throttle up\" call, Challenger broke apart and communications with the vehicle were lost. Flight controllers reported an obvious major malfunction. The later investigation attributed the accident to the failure of the O-ring seals in a joint of the right solid rocket booster.",
+      "answer": "Shortly after launch, the Challenger experienced a catastrophic event. The mission audio transcript reports that based on preliminary searches of the ocean where the Challenger impacted, there was no evidence found that the crew survived [Source 1]. The crew members, including Commander Francis Dick Scobie and Pilot Michael J Smith, were mentioned in the communication following the event [Source 1].",
+      "retrieved_chunks": 5,
+      "response_relevancy": 0.7094,
+      "faithfulness": 0.75,
+      "context_precision": 0.8333,
+      "bleu_score": 0.0627,
+      "rouge_score": 0.2124,
+      "error": ""
+    },
+    {
+      "question": "Who were the crew members of Apollo 13?",
+      "category": "crew",
+      "mission": "apollo_13",
+      "expected": "The Apollo 13 crew were commander James (Jim) Lovell, command module pilot John (Jack) Swigert, and lunar module pilot Fred Haise.",
+      "answer": "The crew members of Apollo 13 were Jim Lovell, Jack Swigert, and Fred Haise. This information is supported by [Source 1] which mentions the crew reporting their physical status and activities on the spacecraft.",
+      "retrieved_chunks": 5,
+      "response_relevancy": 1.0,
+      "faithfulness": 0.5,
+      "context_precision": 1.0,
+      "bleu_score": 0.0795,
+      "rouge_score": 0.4,
+      "error": ""
+    },
+    {
+      "question": "How did the Apollo 13 crew deal with the build-up of carbon dioxide in the lunar module?",
+      "category": "technical",
+      "mission": "apollo_13",
+      "expected": "The lunar module's lithium hydroxide canisters could not remove enough carbon dioxide for three astronauts, and the command module's square canisters did not fit the lunar module. Following instructions from Mission Control, the crew built an adapter from hoses, plastic bags, cardboard and tape so the command module canisters could be used in the lunar module.",
+      "answer": "The Apollo 13 crew dealt with the build-up of carbon dioxide in the lunar module by rigging up a homemade device using the suit circuit return hoses in the lunar module. They added two command module lithium hydroxide scrubber canisters to this device, which helped reduce the quantity of carbon dioxide in the cabin [Source 1]. This setup was primarily a backup to the primary system in the lunar module, which would eventually run out of canisters [Source 3].",
+      "retrieved_chunks": 5,
+      "response_relevancy": 1.0,
+      "faithfulness": 1.0,
+      "context_precision": 1.0,
+      "bleu_score": 0.1016,
+      "rouge_score": 0.2319,
+      "error": ""
+    },
+    {
+      "question": "When did the Apollo 11 lunar module land on the Moon, and what was reported at touchdown?",
+      "category": "timeline",
+      "mission": "apollo_11",
+      "expected": "The lunar module Eagle landed on 20 July 1969, at about 102 hours 45 minutes ground elapsed time, and Neil Armstrong reported \"Houston, Tranquility Base here. The Eagle has landed.\"",
+      "answer": "The Apollo 11 lunar module landed on the Moon on July 20, 1969. The touchdown was reported as follows: \"Houston, Tranquility Base here. The Eagle has landed\" [Source 4].",
+      "retrieved_chunks": 5,
+      "response_relevancy": 0.7924,
+      "faithfulness": 0.0,
+      "context_precision": 1.0,
+      "bleu_score": 0.0984,
+      "rouge_score": 0.5424,
+      "error": ""
+    },
+    {
+      "question": "What were the program alarms during the Apollo 11 lunar descent and how did Mission Control respond?",
+      "category": "technical",
+      "mission": "apollo_11",
+      "expected": "During powered descent the lunar module guidance computer raised 1202 and 1201 program alarms, which indicated that the computer was overloaded with tasks. Mission Control judged that the alarms did not threaten the landing and gave the crew a \"go\" to continue.",
+      "answer": "During the Apollo 11 lunar descent, there were several program alarms triggered by the lunar module guidance computer. The flight controllers in Mission Control responded effectively to these alarms. The overloading of the guidance computer during powered descent was accurately assessed, and the information provided to the flight crew allowed them to continue the descent successfully [Source 2]. For more detailed information on the postflight analyses of these problems, sections 8, 9, and 16 of the mission documents should be consulted.",
+      "retrieved_chunks": 5,
+      "response_relevancy": 0.9167,
+      "faithfulness": 0.6,
+      "context_precision": 0.6792,
+      "bleu_score": 0.2084,
+      "rouge_score": 0.2764,
+      "error": ""
+    }
+  ]
+}
